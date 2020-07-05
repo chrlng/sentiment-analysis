@@ -1,0 +1,49 @@
+
+.content-wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+h1 {
+    margin: 24px;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.form {
+    width: 70%;
+}
+
+.form * {
+    margin: 10px;
+}
+
+/* Navbar */
+
+.my-navbar-subtext {
+    color:grey;
+}
+
+.my-navbar-link {
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.my-navbar-link:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
