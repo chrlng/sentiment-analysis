@@ -42,11 +42,11 @@ h1 {
     margin: 10px;
 }
 
-.btn {
+.my-go-btn {
     width: 16%;
     color: white;
-    background-color: #8C4EF2;
-    border-color: #8C4EF2;
+    background-color: #7c37ed;
+    border-color: #7c37ed;
     border-radius: 24px; 
     padding-top:9px; 
     padding-bottom:9px; 
@@ -55,7 +55,7 @@ h1 {
     transition: 0.3s;
 }
 
-.btn:hover {
+.my-go-btn:hover {
     background-color: #7742CE;
     border-color: #7742CE;
 }

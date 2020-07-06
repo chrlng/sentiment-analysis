@@ -12,11 +12,44 @@
 
         <!-- Main Content Container -->
         <div class="container container-col content-wrapper">
-            <h1>Sentiment Analysis</h1>
-            <form class="container-row form" method="post">
-                <input class="form-control form-control-lg" name="data" type="text" placeholder="Type a sentence here.">
-                <button type="submit" class="btn btn-primary">Let's go!</button>
-            </form>
+          <h1>Sentiment Analysis</h1>
+
+          <!-- Form -->
+          <form class="container-row form" method="post">
+              <input class="form-control form-control-lg" name="data" type="text" placeholder="Type a sentence here.">
+
+              <!-- Button trigger modal -->
+
+              <button type="submit" class="btn btn-primary my-go-btn">Let's go!</button>
+      
+          </form>
+
+          {% if show_modal %}
+            {{sent}}
+          {% endif %}
+
+          <!-- Modal -->
+          <!-- {% if show_modal %}
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  {{sent}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %} -->
+
         </div>
 
         <!-- Big circle top left -->
@@ -32,7 +65,7 @@
 
         <!-- Blob top left -->
         <svg class="funky-blob" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#2D6CF3" d="M44.6,-62C56.4,-61.8,63.6,-47.1,69.8,-32.3C76,-17.4,81.2,-2.5,71.1,4.4C61.1,11.3,35.7,10.1,25.5,22.4C15.4,34.7,20.3,60.4,13.9,74.8C7.5,89.2,-10.3,92.3,-26.3,88.2C-42.4,84.2,-56.7,72.9,-54.3,57.3C-51.8,41.7,-32.6,21.8,-30.7,7C-28.8,-7.8,-44.3,-17.6,-47.6,-26.3C-50.8,-35.1,-41.7,-42.9,-31.7,-43.8C-21.7,-44.8,-10.8,-39,2.8,-43.3C16.4,-47.6,32.8,-62.1,44.6,-62Z" transform="translate(15 80)" />
+            <path fill="#2D6CF3" d="M44.6,-62C56.4,-61.8,63.6,-47.1,69.8,-32.3C76,-17.4,81.2,-2.5,71.1,4.4C61.1,11.3,35.7,10.1,25.5,22.4C15.4,34.7,20.3,60.4,13.9,74.8C7.5,89.2,-10.3,92.3,-26.3,88.2C-42.4,84.2,-56.7,72.9,-54.3,57.3C-51.8,41.7,-32.6,21.8,-30.7,7C-28.8,-7.8,-44.3,-17.6,-47.6,-26.3C-50.8,-35.1,-41.7,-42.9,-31.7,-43.8C-21.7,-44.8,-10.8,-39,2.8,-43.3C16.4,-47.6,32.8,-62.1,44.6,-62Z" transform="translate(-10, 80)" />
         </svg>
 
         <!-- Small circle top left -->
@@ -49,9 +82,9 @@
         <!-- Small circle bottom right -->
         <svg class="small-bottom-right-blob" viewBox="0 0 300 300">
             <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="0%">
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="50%" y2="0%">
                 <stop offset="100%" style="stop-color:#4b7eee;stop-opacity:1" />
-                <stop offset="0%" style="stop-color:#5CB0FF;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#5CB0FF;stop-opacity:1" />
               </linearGradient>
             </defs>
             <ellipse cx="360" cy="300" rx="60" ry="60" fill="url(#grad1)" />
@@ -79,6 +112,12 @@
                 <a class="navbar-text" href="https://chrlng.github.io/"> <b>Christine</b></a>
             </span>
         </nav>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     </body>
 </html>
