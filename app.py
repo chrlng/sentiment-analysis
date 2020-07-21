@@ -26,19 +26,17 @@ def sentiment(score):
 
 
 #home page
-@app.route("/", methods=["POST"])
+@app.route("/")
 def home():
     #use post to get the sentence in the form 
-    if request.method == "POST":
-        # get the data that was put into the input box 
-        data = request.form["data"]
-        if data:
-            score = dictionary(data)["compound"]
-            sent = sentiment(score)
-            return render_template("index.html", sent=sent, show_modal=True)
-        return render_template("index.html", show_modal=False)
+    # if request.method == "POST":
+     # get the data that was put into the input box 
+        # data = request.form["data"]
+        # score = dictionary(data)["compound"]
+        # sent = sentiment(score)
+        # return render_template("index.html", sent=sent)
     #use modal to show the results 
-    return render_template("index.html", show_modal=False)
+    return render_template("index.html")
 
 #results page 
 # @app.route("/results", methods=["POST"])
